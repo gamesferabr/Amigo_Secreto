@@ -4,24 +4,24 @@ from typing import Optional
 
 class Usuario(BaseModel):
     id: Optional[int] = None
-    name : str
-    last_name : str
-    user : str
+    username : str
+    lastusername : str
+    makeuser : str
     password : str
     email : str
     @classmethod
     def user(
         cls,
-        name: str = Form(...),
-        last_name: str = Form(...),
-        user: str = Form(...),
+        username: str = Form(...),
+        lastusername: str = Form(...),
+        makeuser: str = Form(...),
         password: str = Form(...),
         email: str = Form(...),
         ):
           return cls(
-               name= name,
-               last_name= last_name,
-               user = user,
+               username= username,
+               lastusername= lastusername,
+               makeuser = makeuser,
                password= password,
                email=email
           )

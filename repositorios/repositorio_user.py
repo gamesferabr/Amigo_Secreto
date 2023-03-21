@@ -8,10 +8,10 @@ class RepositorioUsuario():
         self.session = session
     
     def criar(self, usuario: schemas.Usuario):
-        usuario_bd = models.Usuario(name = usuario.name, last_name = usuario.last_name, user = usuario.user, password = usuario.password, email = usuario.email )
+        usuario_bd = models.Usuario_models(username = usuario.username, lastusername= usuario.lastusername, makeuser = usuario.makeuser, password = usuario.password, email = usuario.email)
         self.session.add(usuario_bd)
         self.session.commit()
-        self.session.refresh()
+        self.session.refresh(usuario_bd)
         return usuario_bd
    
     def listar(self):
