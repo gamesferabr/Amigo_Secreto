@@ -1,21 +1,20 @@
-from fastapi import APIRouter, status, Depends, FastAPI, Request, Form
+from fastapi import APIRouter, status, Depends, Request
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from configuracao.database import get_db
 from schemas.schemas import Usuario 
 from sqlalchemy.orm import Session
 from repositorios.repositorio_user import RepositorioUsuario
 from models import models
-from configuracao.database import Base,engine
+from configuracao.database import engine
 
 #Para criar a tabela no banco de dados
 models.Base.metadata.create_all(engine)
 
 #app = FastAPI()
 route = APIRouter()
+
 templates = Jinja2Templates(directory="templates")
-route.mount("/static",StaticFiles(directory="static"),name="static")
 
 @route.get('/basic', response_class=HTMLResponse)
 async def get_basic_form(request:Request):

@@ -10,6 +10,3 @@ class Usuario_models(Base):
     makeuser = Column(String,index=True)
     password = Column(String)
     email = Column(String,index=True)
-
-
-    
