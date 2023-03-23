@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean
-from configuracao.database import Base
+from src.config.database import Base
 
 class Usuario_models(Base):
     __tablename__ = 'usuario'
@@ -9,4 +9,5 @@ class Usuario_models(Base):
     lastusername = Column(String,index=True)
     makeuser = Column(String,index=True)
     password = Column(String)
+    password2 = Column(String)
     email = Column(String,index=True)

@@ -5,7 +5,8 @@ from sqlalchemy.orm import sessionmaker
 SQLALQUEMY_DATABASE_URL = "sqlite:///./SiteCadastro.db"
 
 engine = create_engine(
-    SQLALQUEMY_DATABASE_URL,connect_args={"check_same_thread":False}  
+    SQLALQUEMY_DATABASE_URL,connect_args={"check_same_thread":False}
+
 )
 SessionLocal = sessionmaker(autocommit=False,autoflush=False,bind=engine)
 

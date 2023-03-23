@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from rotas import rotas_usuario
+from src.rotas import rotas_usuario
 from fastapi.staticfiles import StaticFiles
 
 

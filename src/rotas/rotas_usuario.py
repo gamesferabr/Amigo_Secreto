@@ -1,12 +1,11 @@
 from fastapi import APIRouter, status, Depends, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from configuracao.database import get_db
-from schemas.schemas import Usuario 
+from src.config.database import get_db,engine
+from src.schemas.schemas import Usuario 
 from sqlalchemy.orm import Session
-from repositorios.repositorio_user import RepositorioUsuario
-from models import models
-from configuracao.database import engine
+from src.repositorios.repositorio_user import RepositorioUsuario
+from src.models import models
 
 #Para criar a tabela no banco de dados
 models.Base.metadata.create_all(engine)

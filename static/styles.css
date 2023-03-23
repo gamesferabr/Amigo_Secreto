@@ -5,7 +5,6 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     border: none;
-
 }
 
 input,label {
@@ -66,13 +65,16 @@ h2 {
 
 .half-box {
     flex: 1 1 45%;
-    position: relative;
+    position:relative;
+    text-align: left;
 }
 
 label {
     width: 10px;
     font-weight: bold;
     font-size: 1.0rem;
+    display: inline;
+    text-align: left;
 }
 
 input {
