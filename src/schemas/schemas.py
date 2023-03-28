@@ -1,4 +1,4 @@
-from fastapi import Form
+from fastapi import Form,Request
 from pydantic import BaseModel,constr,EmailStr,validator
 from typing import Optional
 
@@ -36,7 +36,6 @@ class Usuario(BaseModel):
          if isinstance(value,str):
               return value.strip()
          return value
-         
 
     class Config: 
         orm_mode = True

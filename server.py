@@ -2,6 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.rotas import rotas_usuario
+from src.rotas import rotas_confirmacao
 from fastapi.staticfiles import StaticFiles
 
 
@@ -22,6 +23,9 @@ app.add_middleware(CORSMiddleware,
 #Usuários
 app.mount("/static",StaticFiles(directory="static"),name="static")
 app.include_router(rotas_usuario.route)
+
+#Confirmação 
+app.include_router(rotas_confirmacao.route2)
 
 if __name__ == '__main__':
   uvicorn.run(app)

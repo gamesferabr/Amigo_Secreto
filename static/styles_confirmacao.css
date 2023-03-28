@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+input[type="text"]{
+  border: none;
+  outline: none;
+  padding: 10px;
+  height: 26px;
+  border-radius: 5px;
+  width: 200px;
+  
+}
+
+body {
+    padding-top:5vh;/*5% da tela*/
+    background-image: url('imagens/backgroundIMAGE.jpg');
+    background-position-y:-150px ;
+}
+
+.container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px;
+    font-size: 2.0em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: -30px;
+    margin-top: -20px;
+
+    color: white;
+    font-family: "Open Sans Condesed", sans-serif;
+    font-size: xx-small;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+label {
+    width: 10px;
+    font-weight: bold;
+    font-size: 1.0rem;
+    display: inline;
+    text-align: left;
+}
+
+input {
+    color:black;
+    background-color: white;
+    font-family: "Open Sans Condesed", sans-serif;
+    font-size: small;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: 150px;
+}
+
+input[type="submit"]
+{
+    background-color: #E60084;
+    width: 100px;
+    height: 26px;
+    border-radius: 5px;
+}
+
