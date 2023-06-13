@@ -125,7 +125,7 @@ input[type="checkbox"][name="agreement"]{
     background-color: #ad0363;
 }
 
-.error{
+.error-message{
     color: red;
     font-size: x-small;
     display: block;
